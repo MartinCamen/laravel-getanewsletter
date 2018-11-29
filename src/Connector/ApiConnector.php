@@ -30,7 +30,7 @@ class ApiConnector
         return json_decode(
             $this->client
                 ->request($method, $url, [
-                    'form_params' => $data,
+                    'json' => $data,
                 ])
                 ->getBody()
                 ->getContents()
